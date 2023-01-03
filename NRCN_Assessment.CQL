@@ -54,3 +54,5 @@ not exists ([Observation: Code '4548-4' from LOINC] O where O.value as Quantity 
 //Define ROUTE 2: Defining Population that meet criteria for the assement of Unhealthy Nephropathy, Retinopathy, Cardiovascular or Neuropathy.
 define Route_Two:
 "NRCN_Risk_Inclusion" or "Route_One"
+
+//Managed by Michael Anywar
