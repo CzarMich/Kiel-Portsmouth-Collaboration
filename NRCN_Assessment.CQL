@@ -1,4 +1,4 @@
-library NRCN_Assessment_USECASE_v2
+library NRCN_Assessment_USECASE_v3
 using FHIR version '4.0.0'
 include FHIRHelpers version '4.0.0'
 
@@ -7,9 +7,10 @@ codesystem "ICD10": 'http://icd10.org'
 codesystem "LOINC": 'http://loinc.org'
 codesystem "FHIRCodeSystemRoleCode": 'http://terminology.hl7.org/CodeSystem/v3-RoleCode'
 
+
 context Patient
 
-//Defining Initial Population Diagonaised with 2 Type Diabetes and of ages 39 years - 80 years old.
+//Defining Initial Population of ages 39 years - 80 years old.
 define InitialPopulation:
 AgeInYears() >= 39 and AgeInYears() < 80
 
@@ -43,8 +44,7 @@ not exists ([Observation: Code '1558-6' from LOINC] O where O.value as Quantity 
 not exists ([Observation: Code '4548-4' from LOINC] O where O.value as Quantity >= 48 'mmol/mol') or //HbA1C above normal (mmol/mol)
 not exists ([Observation: Code '4548-4' from LOINC] O where O.value as Quantity >= 6.5 '%') or //HbA1C above normal (% unit)
 not exists ([Observation: Code '45735-8' from LOINC] O where O.value as Quantity >= 5 '%') or //Weight Loss 5%  (% unit)
-not exists ([Observation: Code '45735-8' from LOINC] O where O.value as Quantity >= 10 '%') or //Weight Loss 10%
-
+not exists ([Observation: Code '45735-8' from LOINC] O where O.value as Quantity >= 10 '%') //Weight Loss 10%
 
 //ROUTE 2: Defining Population that meet criteria for the assement of Unhealthy Nephropathy, Retinopathy, Cardiovascular or Neuropathy
 define RouteTwo:
