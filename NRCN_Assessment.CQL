@@ -12,9 +12,7 @@ context Patient
 //Defining Initial Population Diagonaised with 2 Type Diabetes and of ages 39 years - 80 years old.
 define InitialPopulation:
 
-AgeInYears() >= 39 and AgeInYears() < 80 and
-exists ([Condition: Code '44054006' from SNOMED]) //Check for existance condition 2 Type Diabetes in Population
-
+AgeInYears() >= 39 and AgeInYears() < 80
 //Defining secondary Population that have positive complications results above normal and conditions .
 define NRCN_Risk_Inclusion:
 exists ([Condition: Code '38341003' from SNOMED]) or //Check for condition Hypertension.
@@ -29,13 +27,15 @@ exists ([Condition: Code '700449008' from SNOMED]) // Define Patients with NDH
 define NDH:
 exists ([Condition: Code '700449008' from SNOMED])
 
-//Define Patients with 2 type 2 Diabetes //This is route 1
+//ROUTE 1: Define Patients with 2 Type Diabetes.
+define T2Diabetes:
 exists ([Observation: Code '1558-6' from LOINC] O where O.value as Quantity >= 126 'mg/dL') and // check for Fasting glucose P with units mg/dL
 exists ([Observation: Code '4548-4' from LOINC] O where O.value as Quantity >= 48 'mmol/mol') or // HbA1c with units mmol/mol
-exists ([Observation: Code ' 59299002' from SNOMED]) or //Esistance of Thirst
+exists ([Observation: Code '249477003' from SNOMED]) or //Increased thirst (finding)
 exists ([Observation: Code '39156-5' from LOINC] O where O.value as Quantity >= 28 'kg/m2') or // check for BMI above normal
-exits ([Observation: Code '816160009'] from SNOMED) or //Weight Loss.
-exits ([Observation: Code '28442001'] from SNOMED) //Polyuria.
+exists ([Observation: Code '45735-8' from LOINC] O where O.value as Quantity >= 5 '%') or //Weight Loss 5% or more in last 30 days.
+exists ([Observation: Code '45735-8' from LOINC] O where O.value as Quantity >= 10 '%') or //Weight Loss 10% or more in last 180 days.
+exists ([Observation: Code '28442001' from SNOMED) //Existance of Polyuria condition.
 
 
 //Define Patients in exclusion zone
@@ -47,7 +47,7 @@ not exists ([Observation: Code '1558-6' from LOINC] O where O.value as Quantity 
 not exists ([Observation: Code '4548-4' from LOINC] O where O.value as Quantity >= 48 'mmol/mol') or
 not exists ([Observation: Code '4548-4' from LOINC] O where O.value as Quantity >= 6.5 '%')
 
-//Defining Population that meet criteria for the assement of Unhealthy Nephropathy, Retinopathy, Cardiovascular or Neuropathy.
-//This Route 2
+//ROUTE 2: Defining Population that meet criteria for the assement of Unhealthy Nephropathy, Retinopathy, Cardiovascular or Neuropathy.
+
 define NRCN_Inclusion_Population:
 "InitialPopulation" or "NRCN_Risk_Inclusion" or "NDH"
