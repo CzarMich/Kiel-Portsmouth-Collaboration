@@ -1,8 +1,8 @@
 {
     "resourceType": "Measure",
-    "url": "urn:uuid:49f4c7de-3621-3003-8e60-ecc0d8803e09",
+    "url": "urn:uuid:49f4c7de-3621-4012-8e60-ecc0d8803e09",
     "status": "active",
-    "library": "urn:uuid:50f4c7de-3620-3002-8e60-ecc0d2007e08",
+    "library": "urn:uuid:50f4c7de-3620-3008-3e60-ecc0d2007e08",
     "scoring": {
       "coding": [
         {
@@ -26,7 +26,7 @@
             },
             "criteria": {
                 "language": "text/cql-identifier",
-                "expression": "With_Condition_2TD"
+                "expression": "Pre_Route_One"
             }
           }
         ]
