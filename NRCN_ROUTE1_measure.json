@@ -1,8 +1,8 @@
 {
     "resourceType": "Measure",
-    "url": "urn:uuid:49f4c7de-3621-1006-8e60-ecc0d8803e09",
+    "url": "urn:uuid:49f4c7de-3621-1007-8e60-ecc0d8803e09",
     "status": "active",
-    "library": "urn:uuid:50f4c7de-3620-4208-8e60-ecc0d1006e08",
+    "library": "urn:uuid:50f4c7de-3620-4208-8e60-ecc0d1007e08",
     "scoring": {
       "coding": [
         {
@@ -26,7 +26,7 @@
             },
             "criteria": {
                 "language": "text/cql-identifier",
-                "expression": "NRCN_Inclusion_Population"
+                "expression": "ROUTE1"
             }
           }
         ]
