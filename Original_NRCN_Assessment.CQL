@@ -26,7 +26,7 @@ exists ([Observation: Code '4548-4' from LOINC] O where O.value as Quantity >= 4
 exists ([Observation: Code '4548-4' from LOINC] O where O.value as Quantity >= 6.5 '%') or  // HBA1c with units %
 exists ([Condition: Code '700449008' from SNOMED]) // Define Patients with NDH
 
-//Define Patients with (Pre-Route_one)
+//Define Patients with conditions that must exists for 2 Type Diabetes to be Positive(Pre-Route_one)
 define Pre_Route_One:
 exists ([Observation: Code '1558-6' from LOINC] O where O.value as Quantity >= 7.0 'mmol/L') and //FPG Above Normal
 exists ([Observation: Code '4548-4' from LOINC] O where O.value as Quantity >= 48 'mmol/mol') // HbA1c above Normal
@@ -35,10 +35,11 @@ exists ([Observation: Code '4548-4' from LOINC] O where O.value as Quantity >= 4
 define Pre_Route_One_Conditions:
 exists ([Observation: Code '39156-5' from LOINC] O where O.value as Quantity >= 28 'kg/m2') or  // None-Normal BMI
 exists ([Observation: Code '45735-8' from LOINC] O where O.value as Quantity >= 5 '%') or //Weight loss
+exists ([Condition: Code '84229001' from SNOMED]) or //thirst (finding)
 exists ([Condition: Code '249477003' from SNOMED]) or //Increased thirst (finding)
 exists ([Condition: Code '28442001' from SNOMED]) //Existance of Condition Polyuria
 
-//Define ROUTE 1: Define Patients that can be diagonised with 2 Type Diabetes based on Pre_Route_one and Pre_Route_one_Conditions
+//Define ROUTE 1: Define Patients that will be diagonised with 2 Type Diabetes based on Pre_Route_one and Pre_Route_one_Conditions
 define Route_One:
 "Pre_Route_One" and "Pre_Route_One_Conditions"
 
