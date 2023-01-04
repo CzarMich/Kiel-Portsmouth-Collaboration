@@ -1,0 +1,19 @@
+Use case 1 context is the diagnosis of Type 2 Diabetes.
+
+Use case 1.1
+Kevin Bacon, a 57-year-old barista, saw the Practice Nurse at his GP surgery for a review of his hypertension. Amongst the results of his pre-arranged blood test was an HbA1c of 67 mmol/mol. Kevin has no other clinical symptoms such as polyuria, thirst or weight loss. On repeat testing after 6 months, an HbA1c of 65 mmol/mol was recorded. Kevin had a BMI of 30.2 kg/m2 and his father was known to have type 2 diabetes. With this information, Kevin was diagnosed as having type 2 diabetes.
+Since up to 50% of people with type 2 diabetes have complications at the time of diagnosis, Kevin will be assessed for the presence of nephropathy, retinopathy and neuropathy, and his cardiovascular risk estimated.
+
+Use case 1.2
+Lee, a 41-year-old lawyer of Asian origin, on a routine visit to the GP surgery, mentioned to the Practice Nurse that there was a strong family history of type 2 diabetes. Lee was asymptomatic with regard to diabetes symptoms. The Practice Nurse arranged for a venous blood sample to be taken, and a fasting plasma glucose (FPG) level came back at 7.7 mmol/L together with an HbA1c of 52 mmol/mol.
+In this situation where two different tests have been performed (such as FPG and HbA1c) and both are above the diagnostic threshold, then the diagnosis of diabetes is established, even if Lee is asymptomatic.
+
+Use case 1.3
+Nicki, 49-years-old, complained to her GP of fatigue. Amongst her blood test results was an HbA1c of 46 mmol/mol. She had a BMI of 28.4 kg/m2 and her mother has a diagnosis of type 2 diabetes.
+Nicki’s HbA1c does not meet the threshold for diagnosing diabetes, but is within the range indicating non-diabetic hyperglycaemia (NDH) in the UK (42–47 mmol/mol).In NDH, glucose levels are raised but not in the diabetic range. NDH is a situation in which individuals do not meet the criteria for diabetes, but have results that place them at increased risk of developing type 2 diabetes.
+Nicki’s cardiovascular risk is two to three times higher than that of individuals with normal glycaemia.
+
+Use case 1.4
+Zoe, a 63-year-old housewife, complained to her GP of thirst and fatigue. The GP arranged for a venous blood sample to be taken, a fasting plasma glucose (FPG) level came back at 7.1 mmol/L and an HbA1c of 60 mmol/mol came back. Zoe was diagnosed as having type 2 diabetes.
+A person will be diagnosed as T2D if HBA1C and FPG is abnormal and at least 1 of: polyuria, thirst, fatigue, history of T2D or BMI is true
+A person will be at high risk to have T2D if HBA1C or FPG is abnormal and at least 1 of: polyuria, thirst, fatigue, history of T2D or BMI is true and this person will be tested again in 1 month.

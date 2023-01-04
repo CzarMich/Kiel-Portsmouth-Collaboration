@@ -1,0 +1,16 @@
+Use case 2 context is prescription of DOAC in patients with AF.
+
+Use case 2.1
+Nick, a 23 year old male with AF and renal impairment is switching from warfarin due to poor INR control, as in his last two GP appointments, it was first 5.9 and a week later 5.7. His most recent laboratories showed creatinine (Cr) 87 micromol/L, creatinine clearance (CrCl) 35 mL/min. Because his CrCl is >30 mL/min, DOACs can be used safely.
+Edoxaban was the preferred DOAC and the prescribed dose was deemed to be 30 mg once daily.
+
+
+Use case 2.2
+Vlad, a 72-year-old man with a history of heart failure with reduced ejection fraction secondary to ischemic heart disease, diabetes and hypertension comes to the A&E complaining of new-onset palpitations. An electrocardiogram (ECG) is obtained, and it shows atrial fibrillation AF. His current regimen includes metformin, lisinopril, and carvedilol. Laboratories show Cr 102 micromol/L, CrCl 20, haemoglobin 110g/L.
+Warfarin would be the best choice for this patient. In patients with CrCl <30, data supporting the safety and effectiveness of DOACs is very limited.
+
+
+Use case 2.3
+Christine, a 64 year old female is newly diagnosed with AF. Christine’s weight is 86 kgs. At her first checkup visit after the diagnosis her laboratories showed creatinine (Cr) 71 micromol/L, creatinine clearance (CrCl) 92 mL/min. Edoxaban was the preferred DOAC and the prescribed dose was deemed to be 60 mg once daily.
+Either I will prescribe Edoxaban or Warfarin
+If I prescribe Edoxaban then I will give them either 30 or 60 mg dosage based on measurements
