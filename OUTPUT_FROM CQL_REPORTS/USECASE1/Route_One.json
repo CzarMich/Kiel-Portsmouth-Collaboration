@@ -1,0 +1,82 @@
+{
+    "id": "DBL4BHV7OHGVSGV4",
+    "type": "searchset",
+    "entry": [
+        {
+            "fullUrl": "http://localhost:8080/fhir/List/DBL4BD6XKH3MZPEA",
+            "resource": {
+                "meta": {
+                    "versionId": "228",
+                    "lastUpdated": "2023-01-04T09:07:22.106Z"
+                },
+                "mode": "working",
+                "resourceType": "List",
+                "status": "current",
+                "id": "DBL4BD6XKH3MZPEA",
+                "entry": [
+                    {
+                        "item": {
+                            "reference": "Patient/DBI7Q3JTT7JGKQPV"
+                        }
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "http://localhost:8080/fhir/Patient/DBI7Q3JTT7JGKQPV",
+            "resource": {
+                "meta": {
+                    "versionId": "10",
+                    "lastUpdated": "2022-12-17T10:00:07.740Z"
+                },
+                "name": [
+                    {
+                        "use": "official",
+                        "family": "NoFamilyName",
+                        "given": [
+                            "Zoe"
+                        ]
+                    }
+                ],
+                "birthDate": "1959-03-19",
+                "resourceType": "Patient",
+                "active": true,
+                "id": "DBI7Q3JTT7JGKQPV",
+                "identifier": [
+                    {
+                        "use": "usual",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                    "code": "MR"
+                                }
+                            ]
+                        },
+                        "system": "urn:oid:0.1.2.3.4.5.6.7",
+                        "value": "654321"
+                    }
+                ],
+                "gender": "female",
+                "text": {
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p> Patient Zoe.</p> \n    \n    </div>",
+                    "status": "generated"
+                }
+            },
+            "search": {
+                "mode": "include"
+            }
+        }
+    ],
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://localhost:8080/fhir/List?_id=DBL4BD6XKH3MZPEA&_include=List%3Aitem&_count=50&__t=228&__page-id=DBL4BD6XKH3MZPEA"
+        }
+    ],
+    "total": 1,
+    "resourceType": "Bundle"
+}
